@@ -1,0 +1,59 @@
+{
+    "manifestVersion": 1,
+    "id": "vsts-ts-stripper-pole",
+    "name": "Azure TS Tester",
+    "version": "0.0.1",
+    "publisher": "palmtrio-wagonwheel",
+    "public" : true,
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/palmtrio/vsts-ts-stripper-pole"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Tasks for testing TypeScript in VSTS.",
+    "categories": [
+        "Test"
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "tags": [
+        "test", 
+        "testing",
+        "build",
+        "TypeScript"
+    ],
+    "branding": {
+        "color": "rgb(248,153,56)",
+        "theme": "light"
+    },
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "tasks/builTest"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-test-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/BuildTest"
+            }
+        }
+    ]
+}
